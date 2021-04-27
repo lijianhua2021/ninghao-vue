@@ -15,9 +15,17 @@ export default {
     created(){
         console.log('App组件已创建！');
 
-        setTimeout(()=>{
+        this.setName();
+
+    },
+
+    methods: {
+        setName(){
+            setTimeout(()=>{
             this.name = '宁皓网'; 
         },3000);
+
+        },
     },
 };
 </script>
