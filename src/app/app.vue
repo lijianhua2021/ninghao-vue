@@ -1,5 +1,6 @@
 <template>
-    <h3>{{name}}</h3>
+    <h3>{{ name }}</h3>
+    <div>{{ processStatus }}</div>
 </template>
 
 
@@ -10,6 +11,13 @@ export default {
         return {
             name: 'NINGHAO',
         };
+    },
+
+    computed:{
+        processStatus(){
+            return this.name === 'NINGHAO'? '初始化...':'成功设置了数据';
+        },
+
     },
 
     created(){
