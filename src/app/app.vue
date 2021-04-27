@@ -1,6 +1,8 @@
 <template>
     <h3>{{ name }}</h3>
-    <div>{{ processStatus }}</div>
+    {{ processStatus }}
+    <button v-on:click="resetName">重置</button>
+    <button @click="setName">设置</button>
 </template>
 
 
@@ -34,6 +36,9 @@ export default {
         },3000);
 
         },
+        resetName(){
+            this.name = 'NINGHAO'
+        }
     },
 
 
@@ -46,3 +51,8 @@ export default {
     },
 };
 </script>
+<style scoped>
+button {
+    margin: 4px;
+}
+</style>
