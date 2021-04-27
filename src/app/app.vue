@@ -11,5 +11,13 @@ export default {
             name: 'NINGHAO',
         };
     },
+
+    created(){
+        console.log('App组件已创建！');
+
+        setTimeout(()=>{
+            this.name = '宁皓网'; 
+        },3000);
+    },
 };
 </script>
