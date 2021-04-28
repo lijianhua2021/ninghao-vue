@@ -1,22 +1,13 @@
 <template>
   <h3>{{ name }}</h3>
-  <label for="subscription-annual">
-  <input 
-  id="subscription-annual" 
-  type="radio" 
-  value="annual" 
-  v-model="subscription" 
-  />一年
-  </label>
-  <label for="subscription-quarterly">
-  <input 
-  id="subscription-quarterly" 
-  type="radio" 
-  value="quarterly" 
-  v-model="subscription" 
-  />季度
-  </label>
-  <span>=>Subscription: {{ subscription }}</span>
+  <select v-model="category">
+    <option value="">- 选择分类</option>
+    <option value="develop">应用开发</option>
+    <option value="game">游戏开发</option>
+  </select>
+  <span>=>Category: {{ category }}</span>
+
+
 </template>
 
 
@@ -25,7 +16,7 @@ export default {
   data() {
     return {
       name: '宁皓网',
-      subscription: 'annual'
+      category: '',
     };
   },
 };
