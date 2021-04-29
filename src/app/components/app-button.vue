@@ -3,7 +3,9 @@
 </template>
 
 
-<style>
+<style scoped>
+
+
 .button {
     outline: none;
     border: none;
