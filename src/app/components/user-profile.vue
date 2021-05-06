@@ -1,6 +1,9 @@
 <template>
-    <component :is="currentComponent"></component>
-    <samll @click="onClickHintText">{{ hintText }}</samll>
+   <keep-alive>
+     <component :is="currentComponent"></component>
+   </keep-alive>
+     <small @click="onClickHintText">{{ hintText }}</small>
+   
 </template>
 
 <script>
@@ -11,28 +14,28 @@ export default {
     data() {
         return {
             currentComponent: 'UserLogin',
-            hintText: '还没有帐户，点击注册',
+            hintText:'还没有帐户，点击注册'
         };
     },
-    methods : {
-        onClickHintText() {
-            switch(this.currentComponent){
-               case 'UserRegister':
-                   this.currentComponent = 'UserLogin';
-                   this.hintText = '还没有帐户，点击注册';
-                   break;
-               case 'UserLogin':
-                   this.currentComponent = 'UserRegister';
-                   this.hintText = '已有帐户，点击登录'; 
-                   break;
-            }
-
-        }
-
-    },
-    components :{
+    components: {
         UserLogin,
         UserRegister,
     },
+
+    methods: {
+        onClickHintText(){
+            switch(this.currentComponent){
+                case 'UserRegister':
+                    this.currentComponent = 'UserLogin';
+                    this.hintText = '还没有帐户，点击注册';
+                    break;
+                case 'UserLogin':
+                    this.currentComponent = 'UserRegister';
+                    this.hintText = '已有帐户,点击登录';
+                    break;
+            }
+        },
+    },
+    
 };
 </script>
