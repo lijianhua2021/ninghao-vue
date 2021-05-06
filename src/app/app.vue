@@ -17,9 +17,10 @@ export default {
       name: '宁皓网',
     };
   },
-  components: {AppButton,AppDemoButton},
+  components: {AppButton,AppDemoButton}
 };
 </script>
+
 <style>
 @import './styles/app.css';
 </style>
