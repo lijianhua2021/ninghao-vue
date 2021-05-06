@@ -11,6 +11,29 @@ export default {
             username: '',
         };
     },
+    beforeCreate(){
+        console.log('user login before Created');
+    },
+    created(){
+        console.log('user login created');
+    },
+    beforeMount(){
+        console.log('user login before Mounted');
+    },
+
+    mounted(){
+        console.log('user login mounted');
+    },
+    beforeUpdate(){
+        console.log('user login before update');
+    },
+    updated(){
+        console.log('user login updated');
+    },
+    unmounted(){
+        console.log('user login unmounted');
+    },
+
     components: {
         AppInput
     },
